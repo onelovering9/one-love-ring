@@ -124,8 +124,6 @@ nav a:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .product-card {
@@ -141,11 +139,19 @@ nav a:hover {
   transform: translateY(-5px);
 }
 
-.product-card img {
+.product-images {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.product-images img {
   width: 100%;
   height: auto;
-  margin-bottom: 10px;
   border-radius: 10px;
+  flex-shrink: 0;
+  max-width: 100%;
 }
 
 .product-card h3 {
@@ -166,6 +172,31 @@ nav a:hover {
   display: block;
   margin-bottom: 10px;
 }
+
+/* ==== BOTÓN CARRITO ==== */
+.btn-cart {
+  background-color: #d4af37;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cart:hover {
+  background-color: #c29e2e;
+}
+
+/* ==== VIDEO CONTAINER ==== */
+.video-container {
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
 
 /* ==== BOTÓN CARRITO ==== */
 .btn-cart {
