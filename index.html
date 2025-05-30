@@ -13,22 +13,17 @@
   <link rel="preconnect" href="https://cdn.snipcart.com">
   <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.6.0/default/snipcart.css" />
 </head>
-
-<body> <!-- ✅ ESTO FALTABA -->
-
-
+<body>
 
   <!-- ENCABEZADO -->
   <header>
     <h1>ONE LOVE RING</h1>
-    <nav>
+    <div class="hamburger" id="hamburger">☰</div>
+    <nav id="nav-menu">
       <a href="#">Inicio</a>
-      <a href="#coleccion">Colección</a>
-      <a href="#">Nosotros</a>
+      <a href="#">Productos</a>
       <a href="#">Contacto</a>
-      <a href="#" class="cart snipcart-checkout">
-        <i class="fas fa-shopping-cart"></i>
-      </a>
+      <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
     </nav>
   </header>
 
@@ -41,90 +36,88 @@
     </div>
   </section>
 
-<!-- GALERÍA DE PRODUCTOS -->
-<section class="products" id="coleccion">
-  <h2>Colección de Anillos</h2>
-  <div class="product-list">
-    <!-- Producto 1 -->
-    <div class="product-card">
-      <div class="product-images">
-        <img src="assets/Compromiso/1/imagen1.webp" alt="Anillo Dorado Clásico - Vista frontal" />
-        <img src="assets/Compromiso/1/imagen2.webp" alt="Anillo Dorado Clásico - Vista lateral" />
+  <!-- GALERÍA DE PRODUCTOS -->
+  <section class="products" id="coleccion">
+    <h2>Colección de Anillos</h2>
+    <div class="product-list">
+      <!-- Producto 1 -->
+      <div class="product-card">
+        <div class="product-images">
+          <img src="assets/Compromiso/1/imagen1.webp" alt="Anillo Dorado Clásico - Vista frontal" />
+          <img src="assets/Compromiso/1/imagen2.webp" alt="Anillo Dorado Clásico - Vista lateral" />
+        </div>
+        <h3>Anillo Dorado Clásico</h3>
+        <p>Anillo único bañado en oro 18k, con acabados de lujo y detalles artesanales.</p>
+        <span class="precio">149 €</span>
+        <button 
+          class="snipcart-add-item btn-cart"
+          data-item-id="anillo-oro-clasico"
+          data-item-name="Anillo Dorado Clásico"
+          data-item-price="149"
+          data-item-url="/"
+          data-item-description="Anillo único bañado en oro 18k, con acabados de lujo y detalles artesanales."
+          data-item-image="assets/Compromiso/1/imagen1.webp"
+        >
+          Añadir al carrito
+        </button>
+        <div class="video-container">
+          <video controls poster="assets/Compromiso/1/imagen1.webp" width="100%">
+            <source src="assets/Compromiso/1/video.mp4" type="video/mp4" />
+            Tu navegador no soporta el video.
+          </video>
+        </div>
       </div>
-      <h3>Anillo Dorado Clásico</h3>
-      <p>Anillo único bañado en oro 18k, con acabados de lujo y detalles artesanales.</p>
-      <span class="precio">149 €</span>
-      <button 
-        class="snipcart-add-item btn-cart"
-        data-item-id="anillo-oro-clasico"
-        data-item-name="Anillo Dorado Clásico"
-        data-item-price="149"
-        data-item-url="/"
-        data-item-description="Anillo único bañado en oro 18k, con acabados de lujo y detalles artesanales."
-        data-item-image="assets/Compromiso/1/imagen1.webp"
-      >
-        Añadir al carrito
-      </button>
-      <div class="video-container">
-        <video controls poster="assets/Compromiso/1/imagen1.webp" width="100%">
-          <source src="assets/Compromiso/1/video.mp4" type="video/mp4" />
-          Tu navegador no soporta el video.
-        </video>
-      </div>
-    </div>
 
-    <!-- Producto 2 -->
-    <div class="product-card">
-      <div class="product-images">
-        <img src="assets/Compromiso/2/imagen1.webp" alt="Anillo Moissanite Corolla Clásico - Vista frontal" />
-        <img src="assets/Compromiso/2/imagen2.webp" alt="Anillo Moissanite Corolla Clásico - Vista lateral" />
-        <img src="assets/Compromiso/2/imagen3.webp" alt="Anillo Moissanite Corolla Clásico - Detalle piedra" />
-        <img src="assets/Compromiso/2/imagen4.webp" alt="Anillo Moissanite Corolla Clásico - Caja" />
-        <img src="assets/Compromiso/2/imagen5.webp" alt="Anillo Moissanite Corolla Clásico - Uso en dedo" />
-      </div>
-      <h3>Anillo Moissanite Corolla Clásico</h3>
-      <p>Diseño elegante con piedra Moissanite en corte brillante y engaste tipo corona.</p>
-      <span class="precio">189 €</span>
-      <button 
-        class="snipcart-add-item btn-cart"
-        data-item-id="anillo-moissanite-corolla"
-        data-item-name="Anillo Moissanite Corolla Clásico"
-        data-item-price="189"
-        data-item-url="/"
-        data-item-description="Diseño elegante con piedra Moissanite en corte brillante y engaste tipo corona."
-        data-item-image="assets/Compromiso/2/imagen1.webp"
-      >
-        Añadir al carrito
-      </button>
-      <div class="video-container">
-        <video controls poster="assets/Compromiso/2/imagen1.webp" width="100%">
-          <source src="assets/Compromiso/2/video.mp4" type="video/mp4" />
-          Tu navegador no soporta el video.
-        </video>
+      <!-- Producto 2 -->
+      <div class="product-card">
+        <div class="product-images">
+          <img src="assets/Compromiso/2/imagen1.webp" alt="Anillo Moissanite Corolla Clásico - Vista frontal" />
+          <img src="assets/Compromiso/2/imagen2.webp" alt="Anillo Moissanite Corolla Clásico - Vista lateral" />
+          <img src="assets/Compromiso/2/imagen3.webp" alt="Anillo Moissanite Corolla Clásico - Detalle piedra" />
+          <img src="assets/Compromiso/2/imagen4.webp" alt="Anillo Moissanite Corolla Clásico - Caja" />
+          <img src="assets/Compromiso/2/imagen5.webp" alt="Anillo Moissanite Corolla Clásico - Uso en dedo" />
+        </div>
+        <h3>Anillo Moissanite Corolla Clásico</h3>
+        <p>Diseño elegante con piedra Moissanite en corte brillante y engaste tipo corona.</p>
+        <span class="precio">189 €</span>
+        <button 
+          class="snipcart-add-item btn-cart"
+          data-item-id="anillo-moissanite-corolla"
+          data-item-name="Anillo Moissanite Corolla Clásico"
+          data-item-price="189"
+          data-item-url="/"
+          data-item-description="Diseño elegante con piedra Moissanite en corte brillante y engaste tipo corona."
+          data-item-image="assets/Compromiso/2/imagen1.webp"
+        >
+          Añadir al carrito
+        </button>
+        <div class="video-container">
+          <video controls poster="assets/Compromiso/2/imagen1.webp" width="100%">
+            <source src="assets/Compromiso/2/video.mp4" type="video/mp4" />
+            Tu navegador no soporta el video.
+          </video>
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>&copy; 2025 ONE LOVE RING — Donde cada anillo cuenta una historia de amor.</p>
+  </footer>
+
+  <!-- Snipcart -->
+  <div hidden id="snipcart"
+       data-api-key="ODk5MWI5NWYtMDdhYi00YTI1LTlmNDgtYzBiZTgxZmY5MzNjNjM4ODQyMjE0MTMzMzk3NTYw"
+       data-config-modal-style="side">
   </div>
-</section>
 
-
-
- <!-- PIE DE PÁGINA -->
-<footer>
-  <p>&copy; 2025 ONE LOVE RING — Donde cada anillo cuenta una historia de amor.</p>
-</footer>
-
-<!-- Snipcart -->
-<div hidden id="snipcart"
-     data-api-key="ODk5MWI5NWYtMDdhYi00YTI1LTlmNDgtYzBiZTgxZmY5MzNjNjM4ODQyMjE0MTMzMzk3NTYw"
-     data-config-modal-style="side">
-</div>
-
-<script>
-  window.SnipcartSettings = {
-    language: 'es'
-  };
-</script>
-<script async src="https://cdn.snipcart.com/themes/v3.6.0/default/snipcart.js"></script>
+  <script>
+    window.SnipcartSettings = {
+      language: 'es'
+    };
+  </script>
+  <script async src="https://cdn.snipcart.com/themes/v3.6.0/default/snipcart.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
-
