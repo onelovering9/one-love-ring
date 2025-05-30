@@ -1,25 +1,19 @@
 /* ==== FUENTES PERSONALIZADAS ==== */
 @font-face {
-  font-family: 'Lovelace Regular';
-  src: url('./assets/fonts/LovelaceText-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'LovelaceBoldItalic';
+  src: url('../assets/fonts/LovelaceText-BoldItalic.woff2') format('woff2');
 }
-
 @font-face {
-  font-family: 'Lovelace Bold Italic';
-  src: url('./assets/fonts/LovelaceText-BoldItalic.woff2') format('woff2');
-  font-weight: bold;
-  font-style: italic;
+  font-family: 'LovelaceRegular';
+  src: url('../assets/fonts/LovelaceText-Regular.woff2') format('woff2');
 }
-
 
 /* ==== ESTILOS GENERALES ==== */
 body {
-  font-family: 'LovelaceRegular', serif;
+  font-family: 'LovelaceRegular', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fdfdfd;
+  background: #fefefe;
   color: #333;
 }
 
@@ -32,40 +26,38 @@ a {
 header {
   background: #111;
   color: white;
-  padding: 30px 0;
+  padding: 20px;
   text-align: center;
 }
 
-header h1 {
-  font-family: 'LovelaceBoldItalic', serif;
-  font-size: 36px;
-  margin: 0;
-}
-
 nav {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 nav a {
-  margin: 0 20px;
+  margin: 0 15px;
   color: white;
   font-weight: bold;
-  transition: color 0.3s;
+  text-decoration: none;
 }
 
 nav a:hover {
   color: #d4af37;
 }
 
-/* ==== SECCIÓN HERO ==== */
+.cart i {
+  font-size: 20px;
+}
+
+/* ==== HERO SECTION ==== */
 .hero {
   background: url('../assets/hero.jpg') center/cover no-repeat;
   height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   text-align: center;
+  color: white;
   position: relative;
 }
 
@@ -73,7 +65,7 @@ nav a:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .hero-content {
@@ -85,19 +77,34 @@ nav a:hover {
 
 .hero h2 {
   font-family: 'LovelaceBoldItalic', serif;
-  font-size: 42px;
+  font-size: 40px;
   margin-bottom: 15px;
 }
 
 .hero p {
-  font-size: 18px;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background-color: #d4af37;
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #c29e2e;
 }
 
 /* ==== GALERÍA DE PRODUCTOS ==== */
 .products {
-  padding: 60px 20px;
+  padding: 40px 20px;
   text-align: center;
-  background-color: #fff;
 }
 
 .products h2 {
@@ -114,13 +121,13 @@ nav a:hover {
 }
 
 .product-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 320px;
+  transition: transform 0.2s ease;
 }
-.product-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
 
 .product-card:hover {
   transform: translateY(-5px);
@@ -128,97 +135,59 @@ nav a:hover {
 
 .product-card img {
   width: 100%;
-  height: 260px;
-  object-fit: cover;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 .product-card h3 {
-  font-size: 20px;
   margin: 15px 0 10px;
+  font-size: 20px;
   font-family: 'LovelaceBoldItalic', serif;
 }
 
 .product-card p {
-  font-size: 16px;
-  color: #777;
-  margin-bottom: 20px;
-  padding: 0 15px;
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
 }
 
-/* ==== BOTÓN PERSONALIZADO ==== */
-.btn {
-  display: inline-block;
-  background-color: #d4af37; /* Dorado */
-  color: white;
-  padding: 12px 25px;
-  border-radius: 30px;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 15px;
-}
-
-.btn:hover {
-  background-color: #b89c2c;
-  transform: scale(1.05);
-}
-
-/* ==== PRECIOS ==== */
 .precio {
   font-weight: bold;
-  color: #d4af37; /* Dorado elegante */
   font-size: 18px;
   display: block;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-/* ==== BOTÓN AÑADIR AL CARRITO ==== */
+/* ==== BOTÓN CARRITO ==== */
 .btn-cart {
   background-color: #d4af37;
   color: white;
+  padding: 10px 20px;
   border: none;
-  padding: 12px 20px;
-  margin-top: 10px;
+  font-size: 16px;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-  font-size: 16px;
-  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .btn-cart:hover {
-  background-color: #bfa134;
-  transform: translateY(-2px);
+  background-color: #c29e2e;
 }
 
-/* ==== ÍCONO CARRITO ==== */
-nav .cart {
-  position: relative;
-  font-size: 20px;
+/* ==== VIDEO CONTAINER ==== */
+.video-container {
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
-nav .cart::after {
-  content: "🛒";
-  margin-left: 5px;
-}
-
-/* Opcional: animación al hacer hover en tarjetas */
-.product-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
-
 
 /* ==== PIE DE PÁGINA ==== */
 footer {
   background: #111;
   color: white;
   text-align: center;
-  padding: 25px;
-  margin-top: 60px;
-  font-size: 14px;
+  padding: 20px;
+  margin-top: 40px;
 }
