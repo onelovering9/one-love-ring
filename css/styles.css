@@ -1,30 +1,31 @@
 /* ==== FUENTES PERSONALIZADAS ==== */
 @font-face {
-  font-family: 'Lovelace';
-  src: url('./assets/fonts/LovelaceText-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Lovelace Regular';
+  src: url('./assets/fonts/Lovelace Text Regular.otf') format('opentype');
 }
 
 @font-face {
-  font-family: 'Lovelace';
-  src: url('./assets/fonts/LovelaceText-BoldItalic.woff2') format('woff2');
-  font-weight: bold;
-  font-style: italic;
+  font-family: 'Lovelace Bold Italic';
+  src: url('./assets/fonts/Lovelace Text Bold Italic.otf') format('opentype');
 }
 
 /* ==== ESTILOS GENERALES ==== */
 body {
-  font-family: 'Lovelace', serif;
+  font-family: 'Lovelace Regular', serif;
   margin: 0;
   padding: 0;
-  background: #f8f8f8;
+  background: #fdfdfd;
   color: #333;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
 }
 
 /* ==== ENCABEZADO ==== */
@@ -35,14 +36,6 @@ header {
   text-align: center;
 }
 
-header h1 {
-  font-family: 'Lovelace';
-  font-weight: bold;
-  font-style: italic;
-  font-size: 40px;
-  letter-spacing: 2px;
-}
-
 nav {
   margin-top: 10px;
 }
@@ -51,18 +44,17 @@ nav a {
   margin: 0 15px;
   color: white;
   font-weight: bold;
-  text-transform: uppercase;
-  font-size: 14px;
+  text-decoration: none;
 }
 
 nav a:hover {
   color: #d4af37;
 }
 
-/* ==== HERO SECTION ==== */
+/* ==== HERO ==== */
 .hero {
-  background: url('../assets/hero.jpg') center/cover no-repeat;
-  height: 80vh;
+  background: url('./assets/hero.jpg') center/cover no-repeat;
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,96 +67,97 @@ nav a:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 700px;
+  max-width: 600px;
   padding: 20px;
 }
 
 .hero h2 {
-  font-family: 'Lovelace';
-  font-weight: bold;
-  font-style: italic;
   font-size: 48px;
+  font-family: 'Lovelace Bold Italic', serif;
   margin-bottom: 15px;
-  letter-spacing: 1.5px;
 }
 
 .hero p {
-  font-family: 'Lovelace';
-  font-size: 22px;
-  font-style: normal;
-  font-weight: normal;
+  font-size: 20px;
   line-height: 1.5;
 }
 
-/* ==== GALERÍA DE PRODUCTOS ==== */
+/* ==== PRODUCTOS ==== */
 .products {
-  padding: 60px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
 .products h2 {
-  font-family: 'Lovelace';
-  font-weight: bold;
-  font-style: italic;
   font-size: 36px;
   margin-bottom: 40px;
+  font-family: 'Lovelace Bold Italic', serif;
   color: #111;
 }
 
 .product-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
+  padding: 0 20px;
 }
 
 .product-card {
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   padding: 20px;
-  width: 300px;
   transition: transform 0.3s ease;
 }
 
 .product-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-5px);
 }
 
 .product-card img {
   width: 100%;
-  height: auto;
-  border-radius: 10px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .product-card h3 {
-  font-family: 'Lovelace';
-  font-weight: bold;
-  font-style: italic;
-  font-size: 20px;
   margin: 15px 0 10px;
-  color: #222;
+  font-size: 22px;
+  font-family: 'Lovelace Bold Italic', serif;
 }
 
 .product-card p {
-  font-family: 'Lovelace';
   font-size: 18px;
-  color: #666;
+  color: #777;
   margin-bottom: 15px;
 }
 
-/* ==== PIE DE PÁGINA ==== */
+.product-card button {
+  background-color: #d4af37;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+  background-color: #b99b30;
+}
+
+/* ==== FOOTER ==== */
 footer {
   background: #111;
   color: white;
   text-align: center;
-  padding: 25px;
-  font-family: 'Lovelace';
-  font-size: 16px;
+  padding: 20px;
+  margin-top: 50px;
 }
