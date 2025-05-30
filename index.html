@@ -7,13 +7,16 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  
+
   <!-- Snipcart CSS -->
   <link rel="preconnect" href="https://app.snipcart.com">
   <link rel="preconnect" href="https://cdn.snipcart.com">
   <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.6.0/default/snipcart.css" />
 </head>
-<body>
+
+<body> <!-- ✅ ESTO FALTABA -->
+
+
 
   <!-- ENCABEZADO -->
   <header>
@@ -38,55 +41,56 @@
     </div>
   </section>
 
-  <!-- GALERÍA DE PRODUCTOS -->
-  <section class="products" id="coleccion">
-    <h2>Colección de Anillos</h2>
-    <div class="product-list">
-      <div class="product-card">
-        <img src="assets/Compromiso/1/imagen1.webp" alt="Anillo 1" />
-        <h3>Modelo Dorado Clásico</h3>
-        <p>Anillo elegante bañado en oro 18k.</p>
-        <span class="precio">129 €</span>
-        <button 
-          class="snipcart-add-item btn-cart"
-          data-item-id="anillo-dorado-clasico"
-          data-item-name="Modelo Dorado Clásico"
-          data-item-price="129.00"
-          data-item-url="/"
-          data-item-description="Anillo elegante bañado en oro 18k.">
-          Añadir al carrito
-        </button>
-      </div>
-      <div class="product-card">
-        <img src="assets/Compromiso/1/imagen2.webp" alt="Anillo 2" />
-        <h3>Diseño de Lujo</h3>
-        <p>Detalles tallados a mano en acabado brillante.</p>
-        <span class="precio">149 €</span>
-        <button 
-          class="snipcart-add-item btn-cart"
-          data-item-id="diseno-de-lujo"
-          data-item-name="Diseño de Lujo"
-          data-item-price="149.00"
-          data-item-url="/"
-          data-item-description="Detalles tallados a mano en acabado brillante.">
-          Añadir al carrito
-        </button>
+<!-- GALERÍA DE PRODUCTOS -->
+<section class="products" id="coleccion">
+  <h2>Colección de Anillos</h2>
+  <div class="product-list">
+    <div class="product-card">
+      <img src="assets/Compromiso/1/imagen1.webp" alt="Anillo vista frontal" />
+      <img src="assets/Compromiso/1/imagen2.webp" alt="Anillo vista lateral" />
+      <h3>Anillo Dorado Clásico</h3>
+      <p>Anillo único bañado en oro 18k, con acabados de lujo y detalles artesanales.</p>
+      <span class="precio">149 €</span>
+      <button 
+        class="snipcart-add-item btn-cart"
+        data-item-id="anillo-oro-clasico"
+        data-item-name="Anillo Dorado Clásico"
+        data-item-price="149"
+        data-item-url="/"
+        data-item-description="Anillo único bañado en oro 18k, con acabados de lujo y detalles artesanales."
+        data-item-image="assets/Compromiso/1/imagen1.webp"
+      >
+        Añadir al carrito
+      </button>
+
+      <div class="video-container">
+        <video controls poster="assets/Compromiso/1/imagen1.webp" width="100%">
+          <source src="assets/Compromiso/1/video.mp4" type="video/mp4" />
+          Tu navegador no soporta el video.
+        </video>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PIE DE PÁGINA -->
-  <footer>
-    <p>&copy; 2025 ONE LOVE RING — Donde cada anillo cuenta una historia de amor.</p>
-  </footer>
 
-  <!-- Snipcart JS y API Key -->
-  <div hidden id="snipcart" data-api-key="ODk5MWI5NWYtMDdhYi00YTI1LTlmNDgtYzBiZTgxZmY5MzNjNjM4ODQyMjE0MTMzMzk3NTYw" data-config-modal-style="side"></div>
-  <script async src="https://cdn.snipcart.com/themes/v3.6.0/default/snipcart.js"></script>
+ <!-- PIE DE PÁGINA -->
+<footer>
+  <p>&copy; 2025 ONE LOVE RING — Donde cada anillo cuenta una historia de amor.</p>
+</footer>
+
+<!-- Snipcart -->
+<div hidden id="snipcart"
+     data-api-key="ODk5MWI5NWYtMDdhYi00YTI1LTlmNDgtYzBiZTgxZmY5MzNjNjM4ODQyMjE0MTMzMzk3NTYw"
+     data-config-modal-style="side">
+</div>
+
 <script>
   window.SnipcartSettings = {
     language: 'es'
   };
 </script>
+<script async src="https://cdn.snipcart.com/themes/v3.6.0/default/snipcart.js"></script>
 </body>
 </html>
+
