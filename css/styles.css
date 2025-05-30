@@ -231,8 +231,32 @@ footer {
   margin-top: 40px;
 }
 
-/* ==== RESPONSIVE DESIGN ==== */
-@media (max-width: 600px) {
+/* === RESPONSIVIDAD === */
+@media (max-width: 768px) {
+  header {
+    padding: 15px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px;
+    font-size: 14px;
+  }
+
+  .hero {
+    height: auto;
+    padding: 60px 20px;
+    background-position: center center;
+    text-align: center;
+  }
+
   .hero h2 {
     font-size: 28px;
   }
@@ -247,12 +271,39 @@ footer {
     padding: 10px 20px;
   }
 
-  .product-card {
-    width: 90%;
+  .products {
+    padding: 30px 10px;
   }
 
-  nav a {
-    display: block;
-    margin: 10px 0;
+  .products h2 {
+    font-size: 26px;
+  }
+
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .product-card {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .product-card h3 {
+    font-size: 18px;
+  }
+
+  .product-card p,
+  .precio {
+    font-size: 16px;
+  }
+
+  .video-container video {
+    height: auto;
+  }
+
+  footer {
+    font-size: 14px;
   }
 }
