@@ -177,18 +177,41 @@ nav a:hover {
   background-color: #d4af37;
   color: white;
   border: none;
-  padding: 10px 20px;
-  font-weight: bold;
-  font-size: 16px;
-  border-radius: 5px;
+  padding: 12px 20px;
   margin-top: 10px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .btn-cart:hover {
-  background-color: #b8962c;
+  background-color: #bfa134;
+  transform: translateY(-2px);
 }
+
+/* ==== ÍCONO CARRITO ==== */
+nav .cart {
+  position: relative;
+  font-size: 20px;
+}
+
+nav .cart::after {
+  content: "🛒";
+  margin-left: 5px;
+}
+
+/* Opcional: animación al hacer hover en tarjetas */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
 
 /* ==== PIE DE PÁGINA ==== */
 footer {
