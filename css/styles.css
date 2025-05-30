@@ -190,3 +190,22 @@ footer {
     display: flex;
   }
 }
+
+/* Estilo visible cuando se abre el menú en móviles */
+#nav-menu.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  z-index: 999;
+}
+
+#nav-menu.active a {
+  color: black;
+  padding: 0.5rem 0;
+}
