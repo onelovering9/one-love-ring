@@ -2,52 +2,48 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ONE LOVE RING</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-
   <!-- ENCABEZADO -->
   <header>
     <h1>ONE LOVE RING</h1>
     <nav>
       <a href="#">Inicio</a>
-      <a href="#">Anillos</a>
-      <a href="#">Colecciones</a>
+      <a href="#coleccion">Colección</a>
+      <a href="#">Nosotros</a>
       <a href="#">Contacto</a>
     </nav>
   </header>
 
-  <!-- BANNER -->
+  <!-- HERO BANNER -->
   <section class="hero">
     <div class="hero-content">
       <h2>Nueva Colección 2025</h2>
-      <p>Elegancia, compromiso y estilo. Descubre el anillo perfecto para tu historia.</p>
+      <p>Un anillo, un amor para toda la vida.</p>
+      <a href="#coleccion" class="btn">Ver Colección</a>
     </div>
   </section>
 
-  <!-- PRODUCTOS -->
-  <section class="products">
-    <h2>Anillos destacados</h2>
+  <!-- GALERÍA DE PRODUCTOS -->
+  <section class="products" id="coleccion">
+    <h2>Colección de Anillos</h2>
     <div class="product-list">
-
-      <!-- Producto 1 -->
       <div class="product-card">
-        <img src="assets/Compromiso/1/imagen1.webp" alt="Anillo 1">
-        <h3>Anillo de Oro Clásico</h3>
-        <p>Desde 120 USD</p>
-        <button>Ver detalles</button>
+        <img src="assets/Compromiso/1/imagen1.webp" alt="Anillo 1" />
+        <h3>Modelo Dorado Clásico</h3>
+        <p>Anillo elegante bañado en oro 18k.</p>
+        <span class="precio">Desde $129</span>
       </div>
-
-      <!-- Producto 2 -->
       <div class="product-card">
-        <img src="assets/Compromiso/1/imagen2.webp" alt="Anillo 2">
-        <h3>Anillo Moderno Elegante</h3>
-        <p>Desde 110 USD</p>
-        <button>Ver detalles</button>
+        <img src="assets/Compromiso/1/imagen2.webp" alt="Anillo 2" />
+        <h3>Diseño de Lujo</h3>
+        <p>Detalles tallados a mano en acabado brillante.</p>
+        <span class="precio">Desde $149</span>
       </div>
-
     </div>
   </section>
 
@@ -55,6 +51,5 @@
   <footer>
     <p>&copy; 2025 ONE LOVE RING. Todos los derechos reservados.</p>
   </footer>
-
 </body>
 </html>

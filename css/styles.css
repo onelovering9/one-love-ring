@@ -1,65 +1,79 @@
 /* ==== FUENTES PERSONALIZADAS ==== */
 @font-face {
-  font-family: 'Lovelace Regular';
+  font-family: 'LovelaceBoldItalic';
+  src: url('./assets/fonts/Lovelace Text Bold Italic.otf') format('opentype');
+}
+@font-face {
+  font-family: 'LovelaceRegular';
   src: url('./assets/fonts/Lovelace Text Regular.otf') format('opentype');
 }
 
-@font-face {
-  font-family: 'Lovelace Bold Italic';
-  src: url('./assets/fonts/Lovelace Text Bold Italic.otf') format('opentype');
+/* ==== VARIABLES DE COLOR ==== */
+:root {
+  --color-dorado: #d4af37;
+  --color-negro: #111;
+  --color-blanco: #fff;
+  --color-gris-suave: #f9f9f9;
+  --color-texto: #333;
 }
 
-/* ==== ESTILOS GENERALES ==== */
-body {
-  font-family: 'Lovelace Regular', serif;
+/* ==== RESETEO GENERAL ==== */
+* {
   margin: 0;
   padding: 0;
-  background: #fdfdfd;
-  color: #333;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'LovelaceRegular', serif;
+  background-color: var(--color-gris-suave);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+/* ==== ENLACES ==== */
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
-button {
-  font-family: inherit;
-  cursor: pointer;
+a:hover {
+  color: var(--color-dorado);
 }
 
-/* ==== ENCABEZADO ==== */
+/* ==== HEADER ==== */
 header {
-  background: #111;
-  color: white;
-  padding: 20px;
+  background: var(--color-negro);
+  color: var(--color-blanco);
+  padding: 30px 20px;
   text-align: center;
 }
 
+header h1 {
+  font-family: 'LovelaceBoldItalic', serif;
+  font-size: 36px;
+  letter-spacing: 2px;
+}
+
 nav {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 nav a {
-  margin: 0 15px;
-  color: white;
+  margin: 0 20px;
   font-weight: bold;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: #d4af37;
+  font-size: 16px;
+  transition: color 0.3s ease;
 }
 
 /* ==== HERO ==== */
 .hero {
   background: url('./assets/hero.jpg') center/cover no-repeat;
-  height: 70vh;
+  height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
   position: relative;
 }
 
@@ -73,46 +87,64 @@ nav a:hover {
 .hero-content {
   position: relative;
   z-index: 2;
+  color: var(--color-blanco);
   max-width: 600px;
   padding: 20px;
 }
 
 .hero h2 {
-  font-size: 48px;
-  font-family: 'Lovelace Bold Italic', serif;
+  font-family: 'LovelaceBoldItalic', serif;
+  font-size: 42px;
   margin-bottom: 15px;
 }
 
 .hero p {
   font-size: 20px;
-  line-height: 1.5;
+  margin-bottom: 25px;
 }
 
-/* ==== PRODUCTOS ==== */
+.btn {
+  display: inline-block;
+  background: var(--color-dorado);
+  color: var(--color-negro);
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #c89d2c;
+}
+
+/* ==== GALERÍA ==== */
 .products {
-  padding: 50px 20px;
+  padding: 60px 20px;
+  background: var(--color-blanco);
   text-align: center;
 }
 
 .products h2 {
-  font-size: 36px;
+  font-family: 'LovelaceBoldItalic', serif;
+  font-size: 32px;
   margin-bottom: 40px;
-  font-family: 'Lovelace Bold Italic', serif;
-  color: #111;
+  color: var(--color-negro);
 }
 
 .product-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
 }
 
 .product-card {
-  background: white;
-  border-radius: 10px;
+  background: var(--color-blanco);
+  border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   padding: 20px;
+  width: 280px;
   transition: transform 0.3s ease;
 }
 
@@ -122,42 +154,53 @@ nav a:hover {
 
 .product-card img {
   width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .product-card h3 {
-  margin: 15px 0 10px;
-  font-size: 22px;
-  font-family: 'Lovelace Bold Italic', serif;
+  font-size: 20px;
+  margin: 15px 0 8px;
+  font-weight: bold;
 }
 
 .product-card p {
-  font-size: 18px;
-  color: #777;
-  margin-bottom: 15px;
-}
-
-.product-card button {
-  background-color: #d4af37;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 30px;
   font-size: 16px;
-  transition: background-color 0.3s;
+  color: #666;
+  margin-bottom: 10px;
 }
 
-.product-card button:hover {
-  background-color: #b99b30;
+.precio {
+  display: block;
+  font-size: 18px;
+  color: var(--color-dorado);
+  font-weight: bold;
 }
 
 /* ==== FOOTER ==== */
 footer {
-  background: #111;
-  color: white;
+  background: var(--color-negro);
+  color: var(--color-blanco);
   text-align: center;
-  padding: 20px;
-  margin-top: 50px;
+  padding: 30px 20px;
+  margin-top: 60px;
+}
+
+/* ==== RESPONSIVO ==== */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  nav a {
+    margin: 0 10px;
+    font-size: 14px;
+  }
+
+  .product-card {
+    width: 90%;
+  }
 }
