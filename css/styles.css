@@ -1,13 +1,18 @@
 /* ==== FUENTES PERSONALIZADAS ==== */
 @font-face {
-  font-family: 'LovelaceRegular';
+  font-family: 'Lovelace Regular';
   src: url('./assets/fonts/LovelaceText-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'LovelaceBoldItalic';
+  font-family: 'Lovelace Bold Italic';
   src: url('./assets/fonts/LovelaceText-BoldItalic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
 }
+
 
 /* ==== ESTILOS GENERALES ==== */
 body {
