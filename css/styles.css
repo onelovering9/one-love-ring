@@ -59,7 +59,7 @@ nav a:hover {
 
 /* ==== SECCIÓN HERO ==== */
 .hero {
-  background: url('./assets/hero.jpg') center/cover no-repeat;
+  background: url('../assets/hero.jpg') center/cover no-repeat;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -161,6 +161,15 @@ nav a:hover {
 .btn:hover {
   background-color: #b89c2c;
   transform: scale(1.05);
+}
+
+/* ==== PRECIOS ==== */
+.precio {
+  font-weight: bold;
+  color: #d4af37; /* Dorado elegante */
+  font-size: 18px;
+  display: block;
+  margin-top: 10px;
 }
 
 /* ==== PIE DE PÁGINA ==== */
