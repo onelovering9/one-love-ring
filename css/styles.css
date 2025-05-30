@@ -145,6 +145,24 @@ nav a:hover {
   padding: 0 15px;
 }
 
+/* ==== BOTÓN PERSONALIZADO ==== */
+.btn {
+  display: inline-block;
+  background-color: #d4af37; /* Dorado */
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 15px;
+}
+
+.btn:hover {
+  background-color: #b89c2c;
+  transform: scale(1.05);
+}
+
 /* ==== PIE DE PÁGINA ==== */
 footer {
   background: #111;
