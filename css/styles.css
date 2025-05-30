@@ -172,6 +172,24 @@ nav a:hover {
   margin-top: 10px;
 }
 
+/* ==== BOTÓN AÑADIR AL CARRITO ==== */
+.btn-cart {
+  background-color: #d4af37;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cart:hover {
+  background-color: #b8962c;
+}
+
 /* ==== PIE DE PÁGINA ==== */
 footer {
   background: #111;
