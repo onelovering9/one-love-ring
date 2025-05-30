@@ -114,13 +114,13 @@ nav a:hover {
 }
 
 .product-card {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  width: 280px;
-  transition: transform 0.2s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
 
 .product-card:hover {
   transform: translateY(-5px);
